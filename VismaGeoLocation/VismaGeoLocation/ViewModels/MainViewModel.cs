@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using VismaGeoLocation.Models;
+﻿using VismaGeoLocation.Models;
 using VismaGeoLocation.Services;
 
 namespace VismaGeoLocation.ViewModels
