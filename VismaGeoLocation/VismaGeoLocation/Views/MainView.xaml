@@ -5,33 +5,33 @@
     <ContentPage.Content>
         <StackLayout>
             <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
-                <Label Text="Welcome to Xamarin.Forms!" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+                <Label Text="Geolocation APP" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
             </Frame>
             <Label Text="Localización actual" FontSize="Title" Padding="30,10,30,10"/>
-            <Label FontSize="16" Padding="30,24,30,0">
-                <Label.FormattedText>
-                    <FormattedString>
-                        <FormattedString.Spans>
-                            <Span Text="Altitude "/>
-                            <Span Text="{Binding CurrentLocation.Altitude}"/>
-                            <Span Text=" Longitude "/>
-                            <Span Text="{Binding CurrentLocation.Longitude}"/>
-                            <Span Text=" Latitude "/>
-                            <Span Text="{Binding CurrentLocation.Latitude}"/>
-                        </FormattedString.Spans>
-                    </FormattedString>
-                </Label.FormattedText>
-            </Label>
-            <Label FontSize="16" Padding="30,24,30,0">
-                <Label.FormattedText>
-                    <FormattedString>
-                        <FormattedString.Spans>
-                            <Span Text="Adress "/>
-                            <Span Text="{Binding MyAdress.display_name}"/>
-                        </FormattedString.Spans>
-                    </FormattedString>
-                </Label.FormattedText>
-            </Label>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+            
+            <StackLayout Grid.Column="0" Margin="40,0,0,0" VerticalOptions="Center">
+                <Label FontSize="Medium" Text="Altitude"/>
+                <Label FontSize="Medium" Text="Longitude"/>
+                <Label FontSize="Medium" Text="Latitude"/>
+            </StackLayout>
+            <StackLayout Grid.Column="1" Margin="0,0,40,0" VerticalOptions="Center">
+                <Label FontSize="Medium" Text="{Binding CurrentLocation.Altitude}"/>
+                <Label FontSize="Medium" Text="{Binding CurrentLocation.Longitude}"/>
+                <Label FontSize="Medium" Text="{Binding CurrentLocation.Latitude}"/>
+            </StackLayout>
+            </Grid>
+            <Label Text="Dirección" FontSize="Title" Padding="30,30,30,10"/>
+
+            <Label FontSize="Medium" Padding="40,0" Text="{Binding MyAdress.display_name}"/>
+
 
         </StackLayout>
     </ContentPage.Content>
